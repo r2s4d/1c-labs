@@ -90,6 +90,9 @@
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="МатериалыЦенаКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="МатериалыЦенаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">МатериалыЦенаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="МатериалыСумма" id="35">
 					<DataPath>Объект.Материалы.Сумма</DataPath>

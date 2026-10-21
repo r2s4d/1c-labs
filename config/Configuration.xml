@@ -267,6 +267,7 @@
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Склады</Catalog>
 			<Document>ПриходнаяНакладная</Document>
+			<Document>ОказаниеУслуги</Document>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
