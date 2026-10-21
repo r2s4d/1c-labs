@@ -261,12 +261,17 @@
 			<CommonPicture>РасчетЗарплаты</CommonPicture>
 			<CommonPicture>Предприятие</CommonPicture>
 			<CommonModule>РаботаСДокументами</CommonModule>
+			<CommonModule>ЗаполнениеДанных</CommonModule>
 			<Catalog>Клиенты</Catalog>
 			<Catalog>Районы</Catalog>
 			<Catalog>Сотрудники</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Склады</Catalog>
 			<Document>ПриходнаяНакладная</Document>
+			<Document>ОказаниеУслуги</Document>
+			<DocumentNumerator>СквознаяНумерация</DocumentNumerator>
+			<DocumentJournal>СкладскиеДокументы</DocumentJournal>
+			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
