@@ -271,6 +271,8 @@
 			<Document>ОказаниеУслуги</Document>
 			<DocumentNumerator>СквознаяНумерация</DocumentNumerator>
 			<DocumentJournal>СкладскиеДокументы</DocumentJournal>
+			<Report>Материалы</Report>
+			<Report>МатериалыНаСкладах</Report>
 			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>

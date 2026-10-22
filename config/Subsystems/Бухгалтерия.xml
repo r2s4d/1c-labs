@@ -25,6 +25,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиМатериалов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОказаниеУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Материалы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.МатериалыНаСкладах</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
