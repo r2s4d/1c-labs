@@ -14,6 +14,8 @@ exec(open(os.path.join(d, 'batch5.py'), encoding='utf-8').read(), {'__name__': '
 exec(open(os.path.join(d, 'batch6.py'), encoding='utf-8').read(), {'__name__': 'b6', '__file__': os.path.join(d, 'batch6.py')})
 # batch7 тоже правит forms.S
 exec(open(os.path.join(d, 'batch7.py'), encoding='utf-8').read(), {'__name__': 'b7', '__file__': os.path.join(d, 'batch7.py')})
+# batch12 (лаба 14) тоже правит forms.S
+exec(open(os.path.join(d, 'batch12.py'), encoding='utf-8').read(), {'__name__': 'b12', '__file__': os.path.join(d, 'batch12.py')})
 forms.write_forms()
 runpy.run_path(os.path.join(d, 'batch9.py'))
 runpy.run_path(os.path.join(d, 'batch10.py'))
