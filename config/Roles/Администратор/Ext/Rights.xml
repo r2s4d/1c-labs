@@ -100,6 +100,10 @@
 			<name>Delete</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
 		<name>Catalog.Районы</name>
@@ -142,6 +146,10 @@
 		<right>
 			<name>Delete</name>
 			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -186,6 +194,10 @@
 			<name>Delete</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
 		<name>Catalog.Номенклатура</name>
@@ -229,6 +241,10 @@
 			<name>Delete</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
 		<name>Catalog.Склады</name>
@@ -271,6 +287,10 @@
 		<right>
 			<name>Delete</name>
 			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -339,6 +359,10 @@
 			<name>Delete</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
 		<name>Document.ОказаниеУслуги</name>
@@ -406,6 +430,10 @@
 			<name>Delete</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
 	</object>
 	<object>
 		<name>DocumentJournal.СкладскиеДокументы</name>
@@ -415,21 +443,6 @@
 		</right>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Enum.ВидыНоменклатуры</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>

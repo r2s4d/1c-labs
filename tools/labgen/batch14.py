@@ -112,7 +112,7 @@ RIGHTS = {
                   edit=['Read', 'Insert', 'Update', 'View', 'Edit', 'InteractiveInsert', 'InteractiveSetDeletionMark', 'InteractiveClearDeletionMark',
                         'Posting', 'UndoPosting', 'InteractivePosting', 'InteractivePostingRegular', 'InteractiveUndoPosting', 'InteractiveChangeOfPosted', 'InputByString']),
  'DocumentJournal': dict(view=['Read', 'View'], edit=['Read', 'View']),
- 'Enum': dict(view=['Read', 'View', 'InputByString'], edit=['Read', 'View', 'InputByString']),
+# Enum намеренно нет: права на перечисления вешают Конфигуратор при загрузке XML (проверено на платформе)
  'InformationRegister': dict(view=['Read', 'View'], edit=['Read', 'Update', 'View', 'Edit']),
  'AccumulationRegister': dict(view=['Read', 'View'], edit=['Read', 'View']),
  'Report': dict(view=['Use', 'View'], edit=['Use', 'View']),
@@ -178,7 +178,7 @@ for role in (A, D, M, B):
         lvl = level_for(role, kind, name)
         if not lvl:
             continue
-        o += f'\t<object>\n\t\t<name>{kind}.{name}</name>\n' + ''.join(right_xml(n) for n in rights_for(kind, lvl)) + '\t</object>\n'
+        o += f'\t<object>\n\t\t<name>{kind}.{name}</name>\n' + ''.join(right_xml(n) for n in rights_for(kind, lvl)) + (right_xml('InteractiveDelete', False) if lvl == 'full' and kind in ('Catalog', 'Document') else '') + '\t</object>\n'
     o += '</Rights>'
     write(f'Roles/{role}/Ext/Rights.xml', o)
     write(f'Roles/{role}.xml',
