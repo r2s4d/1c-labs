@@ -275,9 +275,11 @@
 			<Enum>ВидыНоменклатуры</Enum>
 			<Report>Материалы</Report>
 			<Report>МатериалыНаСкладах</Report>
+			<Report>РеестрДокументовОказаниеУслуги</Report>
 			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
 			<AccumulationRegister>СтоимостьМатериалов</AccumulationRegister>
+			<AccumulationRegister>Продажи</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
