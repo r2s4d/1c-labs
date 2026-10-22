@@ -160,10 +160,10 @@ def rights_for(kind, lvl):
     return r[lvl]
 
 CLIENT_RIGHTS = {
-    A: ['Administration', 'DataAdministration', 'UpdateDataBaseConfiguration', 'ExclusiveMode', 'ActiveUsers', 'EventLog', 'ThinClient', 'WebClient', 'ThickClient', 'ExternalConnection', 'Automation', 'Output', 'SaveUserData'],
+    A: ['Administration', 'DataAdministration', 'UpdateDataBaseConfiguration', 'ExclusiveMode', 'ActiveUsers', 'EventLog', 'ThinClient', 'WebClient', 'ThickClient', 'ExternalConnection', 'Automation', 'Output', 'SaveUserData', 'MainWindowModeNormal', 'MainWindowModeWorkplace', 'MainWindowModeEmbeddedWorkplace', 'MainWindowModeFullscreenWorkplace', 'MainWindowModeKiosk'],
 }
 for r in (D, M, B):
-    CLIENT_RIGHTS[r] = ['ThinClient', 'WebClient', 'Output', 'SaveUserData']
+    CLIENT_RIGHTS[r] = ['ThinClient', 'WebClient', 'Output', 'SaveUserData', 'MainWindowModeNormal', 'MainWindowModeWorkplace']
 
 def right_xml(name, value=True):
     return f'\t\t<right>\n\t\t\t<name>{name}</name>\n\t\t\t<value>{"true" if value else "false"}</value>\n\t\t</right>\n'

@@ -21,6 +21,14 @@
 			<name>SaveUserData</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>MainWindowModeNormal</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeWorkplace</name>
+			<value>true</value>
+		</right>
 	</object>
 	<object>
 		<name>Catalog.Клиенты</name>
