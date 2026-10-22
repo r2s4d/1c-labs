@@ -7,7 +7,7 @@ import forms
 
 def build(doc, table, hdr_params, hdr_labels, col_params, col_titles, tchild_query_fields, header_query):
     # --- макет ---
-    widths = [30, 180, 60, 60, 80]
+    widths = [4, 30, 10, 10, 14]
     rows = []
     rows.append([(0, 'text', human(doc) + ' №', True), (1, 'param', 'Заголовок', True)])
     cells = []

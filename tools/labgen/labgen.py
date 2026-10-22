@@ -421,18 +421,25 @@ SHEET_NS = ('xmlns="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:dcscom="http://v
  'xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"')
 
 def sheet_xml(widths, rows, named):
-    """widths: [ширина колонок]; rows: [[(col, 'text'|'param', значение, bold)]]; named: [(имя, строка_от, строка_до)]"""
-    fmts = [('font', 0)]           # 1: жирный
-    wfmt = {}
-    for w in widths:
-        if w not in wfmt:
-            fmts.append(('width', w)); wfmt[w] = len(fmts)
+    """widths: ширины колонок в символах (в XML платформа хранит x8); rows: [[(col, 'text'|'param', значение, bold)]]; named: [(имя, строка_от, строка_до)].
+    Тип заполнения ячейки (Параметр) задаётся форматом <format><fillType>Parameter</fillType></format>, а не самим <parameter>.
+    Формат ячейки = комбинация (жирный шрифт, тип заполнения); индексы форматов 1-based. Подтверждено эталонной сериализацией платформы."""
+    fmts = []                       # список (kind, значение)
+    idx = {}
+    def fmt(key, xml):
+        if key not in idx:
+            fmts.append(xml); idx[key] = len(fmts)
+        return idx[key]
+    wfmt = [fmt(('w', w), f'\t<format>\n\t\t<width>{w * 8}</width>\n\t</format>\n') for w in widths]
+    def cell_fmt(bold, param):
+        body = ('\t\t<font>0</font>\n' if bold else '') + ('\t\t<fillType>Parameter</fillType>\n' if param else '')
+        return fmt(('c', bold, param), f'\t<format>\n{body}\t</format>\n') if body else None
     o = (f'<?xml version="1.0" encoding="UTF-8"?>\n<document {SHEET_NS}>\n\t<languageSettings>\n\t\t<currentLanguage>ru</currentLanguage>\n'
          '\t\t<defaultLanguage>ru</defaultLanguage>\n\t\t<languageInfo>\n\t\t\t<id>ru</id>\n\t\t\t<code>Русский</code>\n\t\t\t<description>Русский</description>\n'
          '\t\t</languageInfo>\n\t</languageSettings>\n')
     o += f'\t<columns>\n\t\t<size>{len(widths)}</size>\n'
-    for i, w in enumerate(widths):
-        o += f'\t\t<columnsItem>\n\t\t\t<index>{i}</index>\n\t\t\t<column>\n\t\t\t\t<formatIndex>{wfmt[w]}</formatIndex>\n\t\t\t</column>\n\t\t</columnsItem>\n'
+    for i, f in enumerate(wfmt):
+        o += f'\t\t<columnsItem>\n\t\t\t<index>{i}</index>\n\t\t\t<column>\n\t\t\t\t<formatIndex>{f}</formatIndex>\n\t\t\t</column>\n\t\t</columnsItem>\n'
     o += '\t</columns>\n'
     for r, cells in enumerate(rows):
         o += f'\t<rowsItem>\n\t\t<index>{r}</index>\n\t\t<row>\n'
@@ -441,8 +448,9 @@ def sheet_xml(widths, rows, named):
             if col is not None and col > 0:
                 o += f'\t\t\t\t<i>{col}</i>\n'
             o += '\t\t\t\t<c>\n'
-            if bold:
-                o += '\t\t\t\t\t<f>1</f>\n'
+            f = cell_fmt(bold, kind == 'param')
+            if f:
+                o += f'\t\t\t\t\t<f>{f}</f>\n'
             if kind == 'param':
                 o += f'\t\t\t\t\t<parameter>{val}</parameter>\n'
             else:
@@ -450,16 +458,12 @@ def sheet_xml(widths, rows, named):
                       '\t\t\t\t\t\t</v8:item>\n\t\t\t\t\t</tl>\n')
             o += '\t\t\t\t</c>\n\t\t\t</c>\n'
         o += '\t\t</row>\n\t</rowsItem>\n'
-    o += f'\t<templateMode>true</templateMode>\n\t<height>{len(rows)}</height>\n\t<vgRows>{len(rows)}</vgRows>\n'
+    o += f'\t<height>{len(rows)}</height>\n\t<vgRows>{len(rows)}</vgRows>\n'
     for (nm, a, b) in named:
         o += (f'\t<namedItem xsi:type="NamedItemCells">\n\t\t<name>{nm}</name>\n\t\t<area>\n\t\t\t<type>Rows</type>\n\t\t\t<beginRow>{a}</beginRow>\n'
               f'\t\t\t<endRow>{b}</endRow>\n\t\t\t<beginColumn>-1</beginColumn>\n\t\t\t<endColumn>-1</endColumn>\n\t\t</area>\n\t</namedItem>\n')
-    o += '\t<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>\n'
-    for kind, v in fmts:
-        if kind == 'font':
-            o += '\t<format>\n\t\t<font>0</font>\n\t</format>\n'
-        else:
-            o += f'\t<format>\n\t\t<width>{v}</width>\n\t</format>\n'
+    o += '\t<font ref="style:NormalTextFont" bold="true" kind="StyleItem" scale="100"/>\n'
+    o += ''.join(fmts)
     o += '</document>'
     return o
 
