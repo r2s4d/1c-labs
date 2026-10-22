@@ -272,6 +272,7 @@
 			<Document>ОказаниеУслуги</Document>
 			<DocumentNumerator>СквознаяНумерация</DocumentNumerator>
 			<DocumentJournal>СкладскиеДокументы</DocumentJournal>
+			<Enum>ВидыНоменклатуры</Enum>
 			<Report>Материалы</Report>
 			<Report>МатериалыНаСкладах</Report>
 			<InformationRegister>Цены</InformationRegister>
