@@ -278,6 +278,7 @@
 			<Report>РеестрДокументовОказаниеУслуги</Report>
 			<Report>РейтингУслуг</Report>
 			<Report>РейтингМатериалов</Report>
+			<Report>ВыручкаМастеров</Report>
 			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
 			<AccumulationRegister>СтоимостьМатериалов</AccumulationRegister>
