@@ -6,6 +6,8 @@ for b in ['batch1', 'batch2']:
 import forms
 # batch3 modifies forms.S in the same interpreter
 exec(open(os.path.join(d, 'batch3.py'), encoding='utf-8').read(), {'__name__': 'b3', '__file__': os.path.join(d, 'batch3.py')})
+# batch4 тоже правит forms.S
+exec(open(os.path.join(d, 'batch4.py'), encoding='utf-8').read(), {'__name__': 'b4', '__file__': os.path.join(d, 'batch4.py')})
 forms.write_forms()
 runpy.run_path(os.path.join(d, 'build_data_module.py'))
 print('ALL OK')

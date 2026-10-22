@@ -98,6 +98,9 @@
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="МатериалыМатериалКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="МатериалыМатериалРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">МатериалыМатериалПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="МатериалыКоличество" id="29">
 					<DataPath>Объект.Материалы.Количество</DataPath>

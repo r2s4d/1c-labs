@@ -112,6 +112,9 @@
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПереченьНоменклатурыНоменклатураКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ПереченьНоменклатурыНоменклатураРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ПереченьНоменклатурыНоменклатураПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ПереченьНоменклатурыКоличество" id="35">
 					<DataPath>Объект.ПереченьНоменклатуры.Количество</DataPath>
