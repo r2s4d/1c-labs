@@ -260,6 +260,10 @@
 			<CommonPicture>ОказаниеУслуг</CommonPicture>
 			<CommonPicture>РасчетЗарплаты</CommonPicture>
 			<CommonPicture>Предприятие</CommonPicture>
+			<Role>Администратор</Role>
+			<Role>Директор</Role>
+			<Role>Мастер</Role>
+			<Role>Бухгалтер</Role>
 			<CommonModule>РаботаСДокументами</CommonModule>
 			<CommonModule>ЗаполнениеДанных</CommonModule>
 			<CommonModule>РаботаСоСправочниками</CommonModule>

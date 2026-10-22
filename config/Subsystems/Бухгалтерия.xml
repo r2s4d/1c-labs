@@ -19,9 +19,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Клиенты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Районы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ПриходнаяНакладная</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстаткиМатериалов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОказаниеУслуги</xr:Item>
@@ -34,6 +31,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РейтингМатериалов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ЦеныНаУслуги</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РейтингКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.СкладскиеДокументы</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
