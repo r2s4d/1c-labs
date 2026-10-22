@@ -14,6 +14,15 @@
 					<xr:Common>true</xr:Common>
 				</Visible>
 			</Item>
+			<Item>
+				<Command>AccumulationRegister.СтоимостьМатериалов.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>true</xr:Common>
+				</Visible>
+			</Item>
 		</NavigationPanel>
 		<CommandBar>
 			<Item>

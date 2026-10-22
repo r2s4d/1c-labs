@@ -14,6 +14,15 @@
 					<xr:Common>true</xr:Common>
 				</Visible>
 			</Item>
+			<Item>
+				<Command>AccumulationRegister.СтоимостьМатериалов.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>true</xr:Common>
+				</Visible>
+			</Item>
 		</NavigationPanel>
 		<CommandBar>
 			<Item>
@@ -142,6 +151,13 @@
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ПереченьНоменклатурыСуммаКонтекстноеМеню" id="42"/>
 					<ExtendedTooltip name="ПереченьНоменклатурыСуммаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПереченьНоменклатурыСтоимость" id="44">
+					<DataPath>Объект.ПереченьНоменклатуры.Стоимость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПереченьНоменклатурыСтоимостьКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПереченьНоменклатурыСтоимостьРасширеннаяПодсказка" id="46"/>
 				</InputField>
 			</ChildItems>
 		</Table>

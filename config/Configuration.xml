@@ -277,6 +277,7 @@
 			<Report>МатериалыНаСкладах</Report>
 			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
+			<AccumulationRegister>СтоимостьМатериалов</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
