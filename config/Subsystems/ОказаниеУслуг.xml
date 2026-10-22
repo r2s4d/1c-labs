@@ -36,6 +36,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РейтингУслуг</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РейтингМатериалов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВыручкаМастеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЦеныНаУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РейтингКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Универсальный</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -17,6 +17,7 @@ exec(open(os.path.join(d, 'batch7.py'), encoding='utf-8').read(), {'__name__': '
 forms.write_forms()
 runpy.run_path(os.path.join(d, 'batch9.py'))
 runpy.run_path(os.path.join(d, 'batch10.py'))
+runpy.run_path(os.path.join(d, 'batch11.py'))
 runpy.run_path(os.path.join(d, 'batch8.py'))  # пишет bsl/80_lab10.bsl и docs/lab-10.md, должен идти до сборки модуля
 runpy.run_path(os.path.join(d, 'build_data_module.py'))
 print('ALL OK')

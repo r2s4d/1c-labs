@@ -279,6 +279,9 @@
 			<Report>РейтингУслуг</Report>
 			<Report>РейтингМатериалов</Report>
 			<Report>ВыручкаМастеров</Report>
+			<Report>ЦеныНаУслуги</Report>
+			<Report>РейтингКлиентов</Report>
+			<Report>Универсальный</Report>
 			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиМатериалов</AccumulationRegister>
 			<AccumulationRegister>СтоимостьМатериалов</AccumulationRegister>
